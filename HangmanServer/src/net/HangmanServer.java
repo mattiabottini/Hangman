@@ -26,6 +26,8 @@ public class HangmanServer extends Player{
     Socket clientsocket;
     int porta = 6789;
 
+
+
     DataInputStream in;
     DataOutputStream out = null;
     BufferedReader tastiera = null;
@@ -53,10 +55,11 @@ public class HangmanServer extends Player{
 
     public String invia() throws  IOException {
         System.out.println("4. aspetto un messaggio");
-        String  console = in.readLine();//////////////////////////////////////
+        Character  console = in.readChar();//////////////////////////////////////
+        String temp= console.toString();
 
         System.out.println("5. messsaggio ricevuto " + console);
-        String risposta = console.toUpperCase();
+        String risposta = temp.toUpperCase();
 
         return risposta;
 
