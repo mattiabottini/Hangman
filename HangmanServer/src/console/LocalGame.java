@@ -11,6 +11,8 @@ import hangman.ArtificialPlayer;
 import hangman.Hangman;
 import hangman.Player;
 
+import java.io.IOException;
+
 /**
  * Class for the playing without a network.
  * 
@@ -23,7 +25,7 @@ public class LocalGame {
      * 
      * @param args ignored
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Hangman game = new Hangman();
         Player player = new LocalPlayer();
         // Player player = new ArtificialPlayer();

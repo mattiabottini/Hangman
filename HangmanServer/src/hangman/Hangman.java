@@ -7,6 +7,8 @@
  */
 package hangman;
 
+import java.io.IOException;
+
 /**
  * The controller.
  * 
@@ -27,7 +29,7 @@ public class Hangman {
      * 
      * @param player the participant to the game
      */
-    public void playGame(Player player) {
+    public void playGame(Player player) throws IOException {
         Game game = new Game(dict.pickWord());
         game.addObserver(player);
         game.notifyObservers();

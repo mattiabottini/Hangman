@@ -7,6 +7,8 @@
  */
 package hangman;
 
+import java.io.IOException;
+
 /**
  * A generic player.
  * 
@@ -19,5 +21,5 @@ abstract public class Player implements GameObserver {
      * @param game the game the player is playing
      * @return the letter chosen by the player
      */
-    abstract public char chooseLetter(Game game);
+    abstract public char chooseLetter(Game game) throws IOException;
 }
